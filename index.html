@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Whodunit Wordplay</title>
+  </head>
+  <body>
+    <section>
+      <div id="introPage">
+        <div id="gameTitle">
+          <img src="img/3x/needles@3x-8.png" />
+          <h2>Whodunit</h2>
+          <span>Wordplay</span>
+        </div>
+        <h3>
+          Dr. Perlah Padios fell victim to her own creation. <br />Before
+          passing out, she points to The Room —<br />the locked room you were
+          forbidden to enter...until now.
+          <br />
+          She has minutes to live before her demise. <br />
+          Unlock the room and grant the doctor's dying wish before it’s too
+          late!
+        </h3>
+        <button id="startBtn">Start</button>
+      </div>
+      <div id="mainGame">
+        <img src="img/3x/doorBG.png" id="closedDoor" />
+        <h2 id="currentTime"></h2>
+
+        <div id="wrongBox">
+          <h3>Wrong Guesses</h3>
+          <h4 id="wrongChars"></h4>
+        </div>
+        <div id="chosenWordBox">
+          <h2 id="passPlaceholder">Key Code</h2>
+          <h2 id="chosenWord"></h2>
+          <h2 id="dashedLine"></h2>
+        </div>
+        <div id="floor">
+          <form>
+            <label for="passwordInput"> Guess key code</label>
+            <input
+              type="text"
+              id="passwordInput"
+              pattern="[A-Za-z]+"
+              placeholder="Whodunit"
+              required
+            />
+
+            <label for="letterInput"
+              >Guess letter
+              <input
+                type="text"
+                id="letterInput"
+                pattern="[A-Za-z]"
+                placeholder="R"
+                maxlength="1"
+                required
+              />
+            </label>
+          </form>
+        </div>
+      </div>
+      <div id="bloodCorner"></div>
+      <div id="blood"></div>
+      <img src="img/3x/hand@3x-8.png" id="bloodyHand" />
+      <img src="img/3x/openDoor@3x-8.png" id="openDoor" />
+      <div id="resultMessageCont">
+        <h3>Congratulations!<br />You've unlocked The Room!</h3>
+        <button>Enter Room</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
