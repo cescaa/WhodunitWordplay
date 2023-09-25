@@ -15,6 +15,11 @@
   font-size: 16px;
 }
 
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Matchbook", sans-serif;
   /*
@@ -56,7 +61,7 @@ h3 {
 section {
   position: relative;
   background-color: darkgray;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #introPage,
@@ -142,15 +147,16 @@ button:active {
   position: relative;
   color: white;
   padding: 2rem 0;
-  min-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-x: hidden;
 }
 
 #closedDoor {
   position: absolute;
-  top: 6rem;
-  max-height: 59rem;
-  left: -13.485rem;
+  bottom: 0rem;
+  max-height: 52rem;
+  left: -4rem;
 }
 
 #openDoor {
@@ -340,3 +346,50 @@ button {
 .wrongCol {
   background-color: #8d0b0c;
 }
+
+/* Small screens (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 9px;
+  }
+
+  .highlight,
+  #dashedLine {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  #wrongBox {
+    left: 1rem;
+    bottom: -40rem;
+  }
+
+  #closedDoor {
+    max-height: 32rem;
+  }
+
+  #bloodyHand {
+    max-height: 5.5rem;
+  }
+
+  #bloodCorner {
+    bottom: 0;
+    min-height: 5rem;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Small desktops and laptops */
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
